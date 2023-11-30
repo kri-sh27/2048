@@ -355,6 +355,7 @@ Now, goto Dashboard → Manage Jenkins → Tools →
 
 <br />
 
+    Add DockerHub Username and Password under Global Credentials
 
 Add this stage to Pipeline Script
 
