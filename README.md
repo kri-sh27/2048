@@ -133,6 +133,11 @@ username admin
 password admin
 ```
 Update New password, This is Sonar Dashboard.
+<div align="center">
+  <img src="./Output/3.png" alt="Logo" width="100%" height="100%">
+</div>
+
+<br />
 
 # 2C — Install Trivy
 
@@ -169,7 +174,16 @@ Install below plugins
 ## 3B — Configure Java and Nodejs in Global Tool Configuration
 
 Goto Manage Jenkins → Tools → Install JDK(17) and NodeJs(16)→ Click on Apply and Save
+<div align="center">
+  <img src="./Output/1.png" alt="Logo" width="100%" height="100%">
+</div>
 
+<br />
+<div align="center">
+  <img src="./Output/2.png" alt="Logo" width="100%" height="100%">
+</div>
+
+<br />
 ## 3C — Create a Job
 
 create a job as 2048 Name, select pipeline and click on ok.
@@ -196,11 +210,22 @@ Global Tool Configuration is used to configure different tools that we install u
 
 We will install a sonar scanner in the tools.
 
+<div align="center">
+  <img src="./Output/4.png" alt="Logo" width="100%" height="100%">
+</div>
+
+<br />
+
 In the Sonarqube Dashboard add a quality gate also
 
 Administration--> Configuration-->Webhooks
 
 Add details
+<div align="center">
+  <img src="./Output/5.png" alt="Logo" width="100%" height="100%">
+</div>
+
+<br />
 
 ```bash
 #in url section of quality gate
@@ -256,8 +281,21 @@ pipeline{
 
 Click on Build now, you will see the stage view like this
 
+<div align="center">
+  <img src="./Output/Untitled.png" alt="Logo" width="100%" height="100%">
+</div>
+
+<br />
+
+
 
 To see the report, you can go to Sonarqube Server and go to Projects.
+
+<div align="center">
+  <img src="./Output/8.png" alt="Logo" width="100%" height="100%">
+</div>
+
+<br />
 
 You can see the report has been generated and the status shows as passed. You can see that there are 838 lines. To see a detailed report, you can go to issues.
 
@@ -269,14 +307,13 @@ First, we configured the Plugin and next, we had to configure the Tool
 
 Goto Dashboard → Manage Jenkins → Tools →
 
-give Name as 
-```bash
-DP-Check
-```
+<div align="center">
+  <img src="./Output/10.png" alt="Logo" width="100%" height="100%">
+</div>
 
-select install automatically 
-install from github.com
-version 6.5.1
+<br />
+
+
 
 Click on Apply and Save here.
 
@@ -307,6 +344,16 @@ Docker Pipeline
 Docker API
 
 docker-build-step
+
+and click on install without restart
+
+Now, goto Dashboard → Manage Jenkins → Tools →
+
+<div align="center">
+  <img src="./Output/11.png" alt="Logo" width="100%" height="100%">
+</div>
+
+<br />
 
 
 Add this stage to Pipeline Script
@@ -348,4 +395,10 @@ stage('Deploy to container'){
 ```
 
 You will get this output
+
+<div align="center">
+  <img src="./Output/15.png" alt="Logo" width="100%" height="100%">
+</div>
+
+<br />
 
