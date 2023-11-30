@@ -39,4 +39,25 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 To learn React, check out the [React documentation](https://reactjs.org/).
 
 
-### Deployment Steps
+
+### DevSecOps: Deploying the 2048 Game on Docker and with Jenkins CI/CD
+
+Steps:-
+
+Step 1 — Launch an Ubuntu(22.04) T2 Large Instance
+
+Step 2 — Install Jenkins, Docker and Trivy. Create a Sonarqube Container using Docker.
+
+Step 3 — Install Plugins like JDK, Sonarqube Scanner, Nodejs, and OWASP Dependency Check.
+
+Step 4 — Create a Pipeline Project in Jenkins using a Declarative Pipeline
+
+Step 5 — Install OWASP Dependency Check Plugins
+
+Step 6 — Docker Image Build and Push
+
+Step 7 — Deploy the image using Docker
+
+Step 9 — Access the Game on Browser.
+
+Step 10 — Terminate the AWS EC2 Instances.
