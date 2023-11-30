@@ -1,13 +1,23 @@
-FROM ubuntu:22.04
+# Use Node.js 16 as the base image
+FROM node:16
 
-RUN apt-get update
-RUN apt-get install -y nginx zip curl 
+# Set the working directory in the container
+WORKDIR /app
 
-RUN echo "deamon off;" >>/etc/nginx/nginx.conf
-RUN curl -o /var/www/html/master.zip -L https://codeload.github.com/gabrielecirulli/2048/zip/master
+# Copy package.json and package-lock.json to the container
+COPY package*.json ./
 
-RUN cd /var/www/html/ && unzip master.zip && mv 2048-master/* . && rm -rf 2048-master master.zip
+# Install project dependencies
+RUN npm install
 
-EXPOSE 80
+# Copy the rest of the application code to the container
+COPY . .
 
-CMD ["/usr/sbin/nginx","-c","etc/nginx/nginx.conf"]
+# Build the React app
+RUN npm run build
+
+# Expose port 3000 for the React app
+EXPOSE 3000
+
+# Start the React app
+CMD ["npm", "start"]
