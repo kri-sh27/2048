@@ -1,4 +1,6 @@
-# Getting Started with 2048
+# Getting Started with 2048 | CI/CD Pipeline Automation
+
+
 
 This game (2048) was built using **React** and **TypeScript**. The unique part of this example is animations. The animations in React aren't that straightforward, so I hope you can learn something new from it.
 
@@ -35,3 +37,6 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+
+### Deployment Steps
